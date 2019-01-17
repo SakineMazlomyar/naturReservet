@@ -1,0 +1,12 @@
+form{
+    width: 50%;
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+img#img{
+    width: 30%;
+}
+
+
