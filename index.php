@@ -22,7 +22,7 @@
 
     <label>Kokosnött</label>
     <input type="number" name='animalNumber4'>
-    <input type="submit">
+    <input type="submit" name='subitAnimal' >
     </form>
 </body>
 </html>
