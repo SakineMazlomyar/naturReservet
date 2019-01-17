@@ -1,12 +1,12 @@
 <?php
 
 
-    abstract class animalSound{
+    abstract class Animal{
         abstract function makeSound();
 
     }
 
-    class Apor extends animalSound{
+    class Apor extends Animal{
         public $picture = "";
         public $animalNmber = "";
 
@@ -27,7 +27,7 @@
         }
 
     }
-    class Giraffer extends animalSound{
+    class Giraffer extends Animal{
         protected $picture = "";
         public $animalNmber = "";
 
@@ -48,7 +48,7 @@
         }
 
     }
-    class Tiger extends animalSound{
+    class Tiger extends Animal{
         protected $picture = "";
         public $animalNmber = "";
 
@@ -69,7 +69,7 @@
         }
 
     }
-    class Kokosnotter extends animalSound{
+    class Kokosnotter extends Animal{
         protected $picture = "";
         public $animalNmber = "";
 
@@ -91,21 +91,41 @@
 
     }
 
-    $apa = new Apor("<img style='width: 30%;' src='apa.jpg'>", $_POST['animalNumber1']);
+    $apa = new Apor("<img style='width: 30%;' src='./pictures/apa.jpg'>", $_POST['animalNumber1']);
     echo $apa->getPicture();
-    echo $apa->makeSound();
 
-    $graff = new Giraffer("<img style='width: 30%;' src='giraff.jpg'>", $_POST['animalNumber2']);
+
+    $graff = new Giraffer("<img style='width: 30%;' src='./pictures/giraff.jpg'>", $_POST['animalNumber2']);
     echo $graff->getPicture();
-    echo $graff->makeSound();
+    
 
-    $tiger = new Tiger("<img style='width: 30%;' src='tiger.jpg'>", $_POST['animalNumber3']);
+    $tiger = new Tiger("<img style='width: 30%;' src='./picturestiger.jpg'>", $_POST['animalNumber3']);
     echo $tiger->getPicture();
-    echo $tiger->makeSound();
+    
 
-    $kokosnott = new Tiger("<img style='width: 30%;' src='kokosnott.png'>", $_POST['animalNumber4']);
+    $kokosnott = new Kokosnotter("<img style='width: 30%;' src='./pictures/kokosnott.png'>", $_POST['animalNumber4']);
     echo $kokosnott->getPicture();
-    echo $kokosnott->makeSound();
+    
+   
+    if(isset($_POST['subitAnimal'])){
+        if($_POST['animalNumber1']){
+            echo $apa->makeSound();
+        
+        }
+        if($_POST['animalNumber2']){
+            echo $graff->makeSound();
+            
+        }
+        if($_POST['animalNumber3']){
+            echo $tiger->makeSound();
+        
+        }if($_POST['animalNumber4']){
+            echo $kokosnott->makeSound();
+        }
+
+    }
+    
+
 
 
 ?>
