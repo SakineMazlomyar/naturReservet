@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-<h1>Ange total djur du söker!</h1><br>
+<h1>Ange vad du söker!</h1><br>
     <form id="ajax" method="post" action="./results.php">
     <label>Apa</label>
     <input type="number" name='animalNumber1'>
