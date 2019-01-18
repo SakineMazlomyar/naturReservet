@@ -3,7 +3,7 @@ include("./view/head.php")
 ?>
 <body>
 <h1>Ange vad du söker!</h1><br>
-<form id="ajax" method="post" action="./result/resultTwo.php">
+<form id="ajax" method="post" action="./result/result.php">
 
 <?php
 abstract class Form{
