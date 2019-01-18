@@ -1,27 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css"/>
-</head>
+<?php
+include("./view/head.php")
+?>
 <body>
 <h1>Ange vad du söker!</h1><br>
-    <form id="ajax" method="post" action="./result/resultTwo.php">
-    <label>Apa</label>
-    <input type="number" name='animalNumber1'>
+<form id="ajax" method="post" action="./result/resultTwo.php">
 
-    <label>Giraff</label>
-    <input type="number" name='animalNumber2'>
-    
-    <label>Tiger</label>
-    <input type="number" name='animalNumber3'>
+<?php
+abstract class Form{
+    abstract function getInputElement();
+    abstract function setLabel();
 
-    <label>Kokosnött</label>
-    <input type="number" name='animalNumber4'>
-    <input type="submit" name='subitAnimal' >
-    </form>
+
+
+}
+class Apor extends Form{
+
+    function setLabel(){
+    return '<label>'.get_class($this).'</label>';
+    }
+    function getInputElement(){
+        return '<input type="number" name="'.get_class($this).'">';
+    }
+}
+class Giraffer extends Form{
+    function setLabel(){
+        return '<label>'.get_class($this).'</label>';
+        }
+    function getInputElement(){
+        return '<input type="number" name="'.get_class($this).'">';
+    }
+}
+class Tigrar extends Form{
+    function setLabel(){
+        return '<label>'.get_class($this).'</label>';
+        }
+    function getInputElement(){
+        return '<input type="number" name="'.get_class($this).'">';
+    }
+}
+class Kokosnottrar extends Form{
+    function setLabel(){
+        return '<label>'.get_class($this).'</label>';
+        }
+    function getInputElement(){
+        return '<input type="number" name="'.get_class($this).'">';
+    }
+}
+
+$input1 = new Apor();
+echo $input1->setLabel();
+echo $input1->getInputElement();
+
+
+$input2 = new Giraffer();
+echo $input2->setLabel();
+echo $input2->getInputElement();
+
+$input3 = new Tigrar();
+echo $input3->setLabel();
+echo $input3->getInputElement();
+
+$input4 = new Kokosnottrar();
+echo $input4->setLabel();
+echo $input4->getInputElement();
+?>
+<input type="submit" name='subitAnimal' >
+</form>
 </body>
 </html>
