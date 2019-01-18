@@ -23,11 +23,11 @@ class Kokosnotter extends Animal{
     
 
 }
-$kokosnott = new Kokosnotter("<img style='width: 30%;' src='../pictures/kokosnott.png'>", $_POST['animalNumber4']);
+$kokosnott = new Kokosnotter("<img style='width: 30%;' src='../pictures/kokosnott.png'>", $_POST['Kokosnottrar']);
 echo $kokosnott->getPicture();
 
 
-if($_POST['animalNumber4']){
+if($_POST['Kokosnottrar']){
     echo $kokosnott->makeSound();
 }
 

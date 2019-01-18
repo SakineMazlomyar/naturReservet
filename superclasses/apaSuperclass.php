@@ -19,14 +19,15 @@ class Apor extends Animal{
     }
 
     function makeSound(){
-        return "Det här är apas djud";
+        return "Det här är apas ljud.";
     }
 
 }
-$apa = new Apor("<img style='width: 30%;' src='../pictures/apa.jpg'>", $_POST['animalNumber1']);
+$apa = new Apor("<img style='width: 30%;' src='../pictures/apa.jpg'>", $_POST['Apor']);
 echo $apa->getPicture();
 
-if($_POST['animalNumber1']){
+
+if($_POST['Apor']){
     echo $apa->makeSound();
 
 }

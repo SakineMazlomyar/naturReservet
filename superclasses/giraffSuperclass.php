@@ -25,11 +25,11 @@ class Giraffer extends Animal{
  
 
 }
-$graff = new Giraffer("<img style='width: 30%;' src='../pictures/giraff.jpg'>", $_POST['animalNumber2']);
+$graff = new Giraffer("<img style='width: 30%;' src='../pictures/giraff.jpg'>", $_POST['Giraffer']);
 echo $graff->getPicture();
 
 
-if($_POST['animalNumber2']){
+if($_POST['Giraffer']){
     echo $graff->makeSound();
     
 }
