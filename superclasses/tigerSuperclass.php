@@ -24,10 +24,10 @@ class Tiger extends Animal{
 
 
 }
-$tiger = new Tiger("<img style='width: 30%;' src='../pictures/tiger.jpg'>", $_POST['animalNumber3']);
+$tiger = new Tiger("<img style='width: 30%;' src='../pictures/tiger.jpg'>", $_POST['Tigrar']);
 echo $tiger->getPicture();
 
-if($_POST['animalNumber3']){
+if($_POST['Tigrar']){
     echo $tiger->makeSound();
 
 }
