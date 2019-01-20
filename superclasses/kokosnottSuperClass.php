@@ -1,27 +1,17 @@
 <?php
 
 class Kokosnotter extends Animal{
-    protected $picture = "";
-    public $animalNmber = "";
-
     function __construct($picture, $animalNmbers){
-        $this->picture = $picture;
-        $this->animalNmber = $animalNmbers;
-        
-
+        parent::__construct($picture, $animalNmbers);
+    
     }
-    public function getPicture(){
-        for($i=0; $i<$this->animalNmber; $i++){
-            echo $this->picture;
-        }
-
+    public function getPicture() {
+        return parent::getPicture();
     }
 
     function makeSound(){
-        return "Det har inget djud";
+        return "Det här är appas djud";
     }
-    
-
 }
 $kokosnott = new Kokosnotter("<img style='width: 30%;' src='../pictures/kokosnott.png'>", $_POST['Kokosnottrar']);
 echo $kokosnott->getPicture();
