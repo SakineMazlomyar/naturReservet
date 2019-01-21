@@ -2,22 +2,20 @@
 
 //header("Content-Type: application/json");
 abstract class Animal{
-    protected $picture = "";
-    protected $animalNmber = "";
+    protected $animalPictures= "";
+    protected $animalNmbers = "";
 
     public function getPicture(){
-        for($i=0; $i<$this->animalNmber; $i++){
-            return $this->picture;
-        };
-
+        for($i = 0; $i <$this->animalNmbers; $i++){
+            echo $this->animalPictures;
+        }
+        
     }
 
-    function __construct($picture, $animalNmber){
-        $this->picture = $picture;
-        $this->animalNmber = $animalNmber;
+    function __construct($animalPictures, $animalNmbers){
+        $this->animalNmbers = $animalNmbers;
+        $this->animalPictures = $animalPictures;
     }
-    abstract function makeSound();
-    
 
 }
 
