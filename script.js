@@ -9,7 +9,8 @@ function playMonkeySound(){
     audio.appendChild(src);
 
     document.body.appendChild(audio)
-    alert("Monkey")
+    var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    alert(s)
 }
 function playGiraffSound(){
     var audio = document.createElement("audio");
@@ -21,7 +22,8 @@ function playGiraffSound(){
     audio.appendChild(src);
 
     document.body.appendChild(audio)
-    alert("Giraff")
+    var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    alert(s)
 }
 function playKokosnottSound(){
     var audio = document.createElement("audio");
@@ -33,7 +35,8 @@ function playKokosnottSound(){
     audio.appendChild(src);
 
     document.body.appendChild(audio)
-    alert("Kokosnott")
+    var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    alert(s)
 }
 function playTigerSound(){
     var audio = document.createElement("audio");
@@ -45,5 +48,6 @@ function playTigerSound(){
     audio.appendChild(src);
 
     document.body.appendChild(audio)
-    alert("Tiger")
+    var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    alert(s)
 }
