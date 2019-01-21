@@ -1,6 +1,6 @@
 <?php
 
-class Kokosnotter extends Animal{
+class Kokosnott extends Animal{
     function __construct($animalPictures, $animalNmbers){
         parent::__construct($animalPictures, $animalNmbers);
     

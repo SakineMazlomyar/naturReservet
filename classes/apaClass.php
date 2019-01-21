@@ -1,6 +1,6 @@
 
 <?php
-class Apor extends Animal{
+class Apa extends Animal{
     function __construct($animalPictures, $animalNmbers){
         parent::__construct($animalPictures, $animalNmbers);
     

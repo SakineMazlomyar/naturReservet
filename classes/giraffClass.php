@@ -1,6 +1,6 @@
 
 <?php
-class Giraffer extends Animal{
+class Giraff extends Animal{
     function __construct($animalPictures, $animalNmbers){
         parent::__construct($animalPictures, $animalNmbers);
     
