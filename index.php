@@ -6,11 +6,10 @@ include("./view/head.php")
 <form id="ajax" method="post" action="./result/result.php">
 
 <?php
+
 abstract class Form{
     abstract function getInputElement();
     abstract function setLabel();
-
-
 
 }
 class Apor extends Form{
@@ -19,7 +18,7 @@ class Apor extends Form{
     return '<label>'.get_class($this).'</label>';
     }
     function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
+        return '<input id= "apa" type="number" name="'.get_class($this).'">';
     }
 }
 class Giraffer extends Form{
@@ -27,7 +26,7 @@ class Giraffer extends Form{
         return '<label>'.get_class($this).'</label>';
         }
     function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
+        return '<input id= "giraff" type="number" name="'.get_class($this).'">';
     }
 }
 class Tigrar extends Form{
@@ -64,7 +63,7 @@ $input4 = new Kokosnottrar();
 echo $input4->setLabel();
 echo $input4->getInputElement();
 ?>
-<input type="submit" name='subitAnimal' >
+<input type="submit" name='subitAnimal'>
 </form>
 </body>
 </html>
