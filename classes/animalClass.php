@@ -1,5 +1,4 @@
 <?php
-
 abstract class Animal{
     protected $animalPictures= "";
     protected $animalNmbers = "";

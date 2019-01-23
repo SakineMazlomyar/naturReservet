@@ -1,4 +1,3 @@
-
 <?php
 class Apa extends Animal{
     function __construct($animalPictures, $animalNmbers){

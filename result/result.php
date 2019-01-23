@@ -1,6 +1,6 @@
 <?php include("../view/headSubClasses.php")?>
 <?php
-session_start();
+
 include("../classes/animalClass.php");
 include("../classes/apaClass.php");
 include("../classes/giraffClass.php");

@@ -1,4 +1,3 @@
-
 <?php
 class Giraff extends Animal{
     function __construct($animalPictures, $animalNmbers){
