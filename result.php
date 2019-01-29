@@ -16,7 +16,7 @@ if(isset($_POST['subitAnimal'])){
         $_SESSION['post'][$k]=$v;
         }
 }
-//Second we check the value we want and post the pic
+//Second we check the post array in session and post the pic of value we want
 if ($_SESSION['post']) {
 
     foreach($_SESSION['post'] as $kk=>$v) {
