@@ -4,8 +4,11 @@ class Tiger extends Animal{
         parent::__construct($animalPictures, $animalNmbers);
     
     }
-    public function getPicture() {
-        return parent::getPicture();
+    function makeSound(){
+        for($i = 0; $i <$this->animalNmbers; $i++){
+            echo $this->animalPictures;
+        }
+        
     }
 }
 ?>
