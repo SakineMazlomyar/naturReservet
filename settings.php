@@ -2,11 +2,11 @@
 include("./view/head.php")
 ?>
 <body>
+
 <h1>Ange vad du söker!</h1><br>
-<form id="ajax" method="post" action="./result/result.php">
+<form id="ajax" method="post" action="./result.php">
 
 <?php
-
 abstract class Form{
     abstract function getInputElement();
     abstract function setLabel();
@@ -62,6 +62,9 @@ echo $input3->getInputElement();
 $input4 = new Kokosnott();
 echo $input4->setLabel();
 echo $input4->getInputElement();
+
+
+
 ?>
 <input type="submit" name='subitAnimal'>
 </form>
