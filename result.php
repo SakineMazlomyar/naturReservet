@@ -19,29 +19,29 @@ if(isset($_POST['subitAnimal'])){
 //Second we check the post array in session and post the pic of value we want
 if ($_SESSION['post']) {
 
-    foreach($_SESSION['post'] as $kk=>$v) {
+    foreach($_SESSION['post'] as $key=>$value) {
 
-        if($kk == 'Apa' && $v == $v){
-            $apa = new Apa("<img style='width: 30%;' src='./pictures/apa.jpg' onclick=playMonkeySound()>", $v);
-            echo $apa->getPicture();
+        if($key == 'Apa' && $value == $value){
+            $apa = new Apa("<img style='width: 30%;' src='./pictures/apa.jpg' onclick=playMonkeySound()>", $value);
+            echo $apa->makeSound();
 
         }
 
-        if($kk == 'Giraff' && $v == $v) {
-            $graff = new Giraff("<img style='width: 30%;' src='./pictures/giraff.jpg' onclick=playGiraffSound()>", $v);
-            echo $graff->getPicture();
+        if($key == 'Giraff' && $value == $value) {
+            $graff = new Giraff("<img style='width: 30%;' src='./pictures/giraff.jpg' onclick=playGiraffSound()>", $value);
+            echo $graff->makeSound();
         
         }
         
 
-        if($kk == 'Kokosnott' && $v == $v) {
-            $kokosnott = new Kokosnott("<img style='width: 30%;' src='./pictures/kokosnott.png' onclick=playKokosnottSound()>", $v);
-            echo $kokosnott->getPicture();
+        if($key == 'Kokosnott' && $value == $value) {
+            $kokosnott = new Kokosnott("<img style='width: 30%;' src='./pictures/kokosnott.png' onclick=playKokosnottSound()>", $value);
+            echo $kokosnott->makeSound();
 
         }
-        if($kk == 'Tiger' && $v == $v) {
-            $tiger = new Tiger("<img style='width: 30%;' src='./pictures/tiger.jpg' onclick=playTigerSound()>", $v);
-            echo $tiger->getPicture();
+        if($key == 'Tiger' && $value == $value) {
+            $tiger = new Tiger("<img style='width: 30%;' src='./pictures/tiger.jpg' onclick=playTigerSound()>", $value);
+            echo $tiger->makeSound();
 
         }
         
