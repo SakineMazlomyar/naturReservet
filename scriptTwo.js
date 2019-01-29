@@ -2,8 +2,9 @@ function update(url){
     $.ajax({
         type:'post',
         dataType:'json',
-        url:'./testing.php',
+        url:'./result.php',
         success: (dat) => {
+            window.location.href = "./result.php";
             if (dat) {
                 console.log(dat)
             }else{
@@ -12,4 +13,6 @@ function update(url){
         },
         error: (dat, error) => {console.log( dat +  error)}
     });
+
+    return false
 }
