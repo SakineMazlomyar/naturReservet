@@ -3,7 +3,7 @@ function playMonkeySound(){
     var audio = document.createElement("audio");
     audio.setAttribute("controls", "controls")
     var src = document.createElement("source");
-    src.setAttribute("src","../sounds/monkey.mp3" )
+    src.setAttribute("src","./sounds/monkey.mp3" )
 
     audio.appendChild(src);
 
@@ -18,7 +18,7 @@ function playGiraffSound(){
     var audio = document.createElement("audio");
     audio.setAttribute("controls", "controls")
     var src = document.createElement("source");
-    src.setAttribute("src","../sounds/giraff.mp3" )
+    src.setAttribute("src","./sounds/giraff.mp3" )
 
     audio.appendChild(src);
 
@@ -30,7 +30,7 @@ function playKokosnottSound(){
     var audio = document.createElement("audio");
     audio.setAttribute("controls", "controls")
     var src = document.createElement("source");
-    src.setAttribute("src","../sounds/knife.mp3" )
+    src.setAttribute("src","./sounds/knife.mp3" )
 
     audio.appendChild(src);
 
@@ -42,7 +42,7 @@ function playTigerSound(){
     var audio = document.createElement("audio");
     audio.setAttribute("controls", "controls")
     var src = document.createElement("source");
-    src.setAttribute("src","../sounds/tiger.mp3" )
+    src.setAttribute("src","./sounds/tiger.mp3" )
 
     audio.appendChild(src);
 
