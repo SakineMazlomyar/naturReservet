@@ -2,97 +2,21 @@
 include("./view/head.php")
 ?>
 <body>
-
 <h1>Ange vad du söker!</h1><br>
 <form id="ajax" method="post" action="./result.php">
 
 <?php
-abstract class Form{
-    abstract function getInputElement();
-    abstract function setLabel();
-
-}
-class Apa extends Form{
-
-    function setLabel(){
-    return '<label>'.get_class($this).'</label>';
-    }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Giraff extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input  type="number" name="'.get_class($this).'">';
-    }
-}
-class Tiger extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Kokosnott extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Antilop extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Gorill extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Gran extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Lejon extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Palmtrad extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
-class Ros extends Form{
-    function setLabel(){
-        return '<label>'.get_class($this).'</label>';
-        }
-    function getInputElement(){
-        return '<input type="number" name="'.get_class($this).'">';
-    }
-}
+include("./form/formClass.php");
+include("./form/apaInputClass.php");
+include("./form/giraffInputClass.php");
+include("./form/tigerInputClass.php");
+include("./form/kokonnottInputClass.php");
+include("./form/tigerInputClass.php");
+include("./form/antilopInputClass.php");
+include("./form/granInputClass.php");
+include("./form/lejonInputClass.php");
+include("./form/palmtradInputClass.php");
+include("./form/rosInputClass.php");
 
 $input1 = new Apa();
 echo $input1->setLabel();
@@ -134,8 +58,6 @@ echo $input9->getInputElement();
 $input10 = new Ros();
 echo $input10->setLabel();
 echo $input10->getInputElement();
-
-
 
 ?>
 <input type="submit" name='subitAnimal'>
