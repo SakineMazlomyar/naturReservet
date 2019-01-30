@@ -1,6 +1,10 @@
 <?php
 include("./view/headSubClasses.php");
 
+echo  "<form method='post'>
+          <input type='submit' value='restartPage' name='restartPage'>
+      </form>";
+
 session_start();
 include("./classes/animalClass.php");
 include("./classes/apaClass.php");
@@ -20,25 +24,25 @@ if ($_SESSION['post']) {
     foreach($_SESSION['post'] as $key=>$value) {
         
         if($key == 'Apa' && $value == $value){
-            $apa = new Apa("<img style='width: 30%;' src='./pictures/apa.jpg' onclick=playMonkeySound()>", $value);
+            $apa = new Apa('./pictures/apa.jpg', $value);
             echo $apa->makeSound();
             
         }
         
         if($key == 'Giraff' && $value == $value) {
-            $graff = new Giraff("<img style='width: 30%;' src='./pictures/giraff.jpg' onclick=playGiraffSound()>", $value);
+            $graff = new Giraff('./pictures/giraff.jpg', $value);
             echo $graff->makeSound();
             
         }
         
         
         if($key == 'Kokosnott' && $value == $value) {
-            $kokosnott = new Kokosnott("<img style='width: 30%;' src='./pictures/kokosnott.png' onclick=playKokosnottSound()>", $value);
+            $kokosnott = new Kokosnott('./pictures/kokosnott.png', $value);
             echo $kokosnott->makeSound();
             
         }
         if($key == 'Tiger' && $value == $value) {
-            $tiger = new Tiger("<img style='width: 30%;' src='./pictures/tiger.jpg' onclick=playTigerSound()>", $value);
+            $tiger = new Tiger('./pictures/tiger.jpg', $value);
             echo $tiger->makeSound();
             
         }
@@ -46,7 +50,13 @@ if ($_SESSION['post']) {
 
     }
 
+    if(isset($_POST['restartPage'])){
+        $_SESSION['post'] = null;
+        header('Location:settings.php');
+    }
+
 }
+
 
 ?>
 <body>
