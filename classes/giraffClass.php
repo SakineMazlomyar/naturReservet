@@ -6,7 +6,7 @@ class Giraff extends Animal{
     }
     function makeSound(){
         for($i = 0; $i <$this->animalNmbers; $i++){
-            echo '<img style="width: 30%;" src='.$this->animalPicSrc.' onclick=playGiraffSound()>';
+            echo '<img src='.$this->animalPicSrc.' onclick=playGiraffSound()>';
         }
         
     }
