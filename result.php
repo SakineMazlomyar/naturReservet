@@ -25,6 +25,10 @@ if(isset($_POST['subitAnimal'])){
         }
 }
 //Second we check the post array in session and post the pic of value we want
+?>
+<div>
+
+<?php
 if ($_SESSION['post']) {
     
     foreach($_SESSION['post'] as $key=>$value) {
@@ -99,7 +103,7 @@ if ($_SESSION['post']) {
 
 
 ?>
-<body>
+</div>
     
 </body>
 </html>
