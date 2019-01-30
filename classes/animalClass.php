@@ -1,13 +1,13 @@
 <?php
 abstract class Animal{
-    protected $animalPictures= "";
+    protected $animalPicSrc= "";
     protected $animalNmbers = "";
 
     abstract function makeSound();
 
-    function __construct($animalPictures, $animalNmbers){
+    function __construct($animalPicSrc, $animalNmbers){
         $this->animalNmbers = $animalNmbers;
-        $this->animalPictures = $animalPictures;
+        $this->animalPicSrc = $animalPicSrc;
     }
 
 }
