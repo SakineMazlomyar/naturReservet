@@ -1,12 +1,12 @@
 <?php
 class Apa extends Animal{
-    function __construct($animalPictures, $animalNmbers){
-        parent::__construct($animalPictures, $animalNmbers);
+    function __construct($animalPicSrc, $animalNmbers){
+        parent::__construct($animalPicSrc, $animalNmbers);
     
     }
     function makeSound(){
         for($i = 0; $i <$this->animalNmbers; $i++){
-            echo $this->animalPictures;
+            echo '<img style="width: 30%;" src='.$this->animalPicSrc.' onclick=playMonkeySound()>';
         }
         
     }
