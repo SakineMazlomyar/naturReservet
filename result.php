@@ -5,6 +5,7 @@ echo  "<form method='post'>
           <input type='submit' value='restartPage' name='restartPage'>
       </form>";
 
+
 session_start();
 include("./classes/animalClass.php");
 include("./classes/apaClass.php");
@@ -19,10 +20,11 @@ include("./classes/palmtradClass.php");
 include("./classes/rosClass.php");
 
 //First we save all values to session from $_Post which is an assocciative array 
+
 if(isset($_POST['subitAnimal'])){
     foreach($_POST as $k=>$v) {
         $_SESSION['post'][$k]=$v;
-        }
+    }
 }
 //Second we check the post array in session and post the pic of value we want
 ?>
@@ -93,9 +95,11 @@ if ($_SESSION['post']) {
 
     }
 
+
     if(isset($_POST['restartPage'])){
-        $_SESSION['post'] = null;
+        unset($_SESSION['post']);
         header('Location:settings.php');
+    
     }
 
 
