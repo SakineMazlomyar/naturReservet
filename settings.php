@@ -6,6 +6,14 @@ include("./view/head.php")
 <form id="ajax" method="post" action="./result.php">
 
 <?php
+session_start();
+
+if(isset($_SESSION['post'])) {
+    
+    header('Location:result.php');
+    die();
+
+}
 include("./form/formClass.php");
 include("./form/apaInputClass.php");
 include("./form/giraffInputClass.php");
@@ -58,6 +66,7 @@ echo $input9->getInputElement();
 $input10 = new Ros();
 echo $input10->setLabel();
 echo $input10->getInputElement();
+
 
 ?>
 <input type="submit" name='subitAnimal'>
