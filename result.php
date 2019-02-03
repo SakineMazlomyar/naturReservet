@@ -60,23 +60,23 @@ if ($_SESSION['post']) {
             
         }
         if($key == 'Antilop' && $value == $value) {
-            $tiger = new Tiger('./pictures/antelope.jpg', $value);
+            $tiger = new Antilop('./pictures/antelope.jpg', $value);
             echo $tiger->makeSound();
             
         }
         if($key == 'Gorill' && $value == $value) {
-            $tiger = new Tiger('./pictures/gorill.jpg', $value);
+            $tiger = new Gorill('./pictures/gorill.jpg', $value);
             echo $tiger->makeSound();
             
         }
         if($key == 'Gran' && $value == $value) {
-            $tiger = new Tiger('./pictures/gran.png', $value);
+            $tiger = new Gran('./pictures/gran.png', $value);
             echo $tiger->makeSound();
             
         }
         
         if($key == 'Lejon' && $value == $value) {
-            $tiger = new Tiger('./pictures/lejon.jpg', $value);
+            $tiger = new Lejon('./pictures/lejon.jpg', $value);
             echo $tiger->makeSound();
             
         }
