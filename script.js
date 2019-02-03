@@ -86,4 +86,16 @@ function playAntelopeSound(){
     var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
     alert(s)
 }
+function playRoseSound(){
+    var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    alert(s)
+}
+function playPalmtradSound(){
+    var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    alert(s)
+}
+function playGranSound(){
+    var s =Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+    alert(s)
+}
 

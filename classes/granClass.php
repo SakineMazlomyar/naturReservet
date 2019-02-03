@@ -6,7 +6,7 @@ class Gran extends Animal{
     }
     function makeSound(){
         for($i = 0; $i <$this->animalNmbers; $i++){
-            echo '<img src='.$this->animalPicSrc.'>';
+            echo '<img src='.$this->animalPicSrc.' onclick=playGranSound()>';
         }
         
     }
